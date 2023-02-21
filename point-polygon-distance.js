@@ -22,9 +22,9 @@ module.exports = function(polygon, point, orientation) {
 		var v = [point[0] - polygon[idx1][0], point[1] - polygon[idx1][1]];
 		var dot_u = (u[0]*u[0] + u[1]*u[1])
 		var test = (u[0]*v[0] + u[1]*v[1])/dot_u  // projection test
-		console.log(u)
-		console.log(v)
-		console.log(test)
+// 		console.log(u)
+// 		console.log(v)
+// 		console.log(test)
 		
 		if(test <= 1 && test >=0){ // point is projected on line segment
 			dist = det/Math.sqrt(dot_u)
@@ -37,8 +37,8 @@ module.exports = function(polygon, point, orientation) {
 
 	}
 	
-		console.log(max_neg)
-		console.log(min_pos)
+// 		console.log(max_neg)
+// 		console.log(min_pos)
 		
 	if(min_pos == Number.MAX_VALUE && max_neg == -Number.MAX_VALUE){ // sitance from corners if no projection to line segments
 		var tmp 
